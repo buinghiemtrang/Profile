@@ -1,0 +1,145 @@
+@import './variables';
+@import './mixins';
+
+main {
+
+    .contact{
+        margin: 250px 0 0;
+        padding-left: 7%;
+        padding-bottom: 30px;
+        background-color: $bg-color;
+    
+        &__title {
+            
+            h3 {
+                font-weight: 700;
+                font-size: 35px;
+                margin: 60px 0 10px 35px;
+                position: relative; 
+                display: inline-block;
+                vertical-align: top;
+                z-index: 1;
+                padding: 0 0 10px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    margin: auto;
+                    background: $main-color;
+                    width: 60px;
+                    height: 1px;
+                    z-index: -1;
+                    padding: 0 0 2px;
+                }
+            }
+    
+            &-desc {
+                margin: 0;
+                font-size: 16px;
+                letter-spacing: 2px;
+                margin-left: 35px;
+                font-weight: 500;
+                color: #444;
+            }
+        }
+
+        &__box {
+            display: grid;
+            grid-template-columns: 65% 35%;
+            grid-gap: 20px;
+            margin: 50px 80px 50px 35px;
+            
+
+            &-me {
+                background-color: $white-color;
+                padding: 30px;
+                box-shadow: 0 20px 20px rgba(45, 52, 54,0.5);
+
+                h3{
+                    font-size: 20px;
+                    margin: 20px 20px;
+                }
+                .form-control input {
+                    width: 100%;
+                    border: 0;
+                    padding: 15px 0 15px 20px;
+                    border-bottom: 1px solid #ccc;
+                    outline: none;
+                    font-size: 15px;
+                }
+                .form-control input:first-child{
+                    width: 45%;
+                    margin-right: 27px;
+                }
+                .form-control input:nth-child(2){
+                    width: 50%;
+                }
+
+                .form-group textarea {
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 170px;
+                    font-size: 16px;
+                    padding: 15px 0 15px 20px;
+                    border: 0;
+                    border-bottom: 1px solid #ccc;
+                    outline: none;
+                    text-align: left;
+                }
+                button {
+                    background-color: $main-color;
+                    color: $white-color;
+                    font-size: 15px;
+                    font-weight: 500;
+                    padding: 15px 20px;
+                    border: 0;
+                    cursor: pointer;
+                    margin-top: 30px;
+                }
+            }
+
+            &-info {
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-gap: 20px;
+                
+
+                .box__item {
+                    display: grid;
+                    grid-template-columns: 30% 70%;
+                    grid-gap: 20px;
+                    padding: 20px;
+                    background-color: $white-color;
+                    box-shadow: 0 20px 20px rgba(45, 52, 54,0.5);
+
+                    &-icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        i{  
+                            font-size: 30px;
+                            padding: 20px;
+                            background-color: $main-color;  
+                            clip-path: circle(45% at 50% 50%);
+                            color: $white-color;
+                        }
+                    }
+                    &-content {
+
+                        h4{
+                            font-size: 16px;
+                            padding: 0 0 20px;
+                        }
+                        p{
+                            font-size: 14px;
+                            color: #555;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

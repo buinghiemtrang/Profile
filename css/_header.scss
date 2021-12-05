@@ -1,0 +1,47 @@
+@import './variables';
+
+.header{
+    background-color: #333;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    
+
+    &__logo{
+        // padding: px;
+
+        &-img{
+            width: 20px;
+            display: inline;
+        }
+
+        &-title{
+            display: inline;
+            font-weight: 400;
+            font-size: 25px;
+            color: #fff;
+    
+            span {
+                color: $green-color;
+                font-weight: 300;
+            }
+        }
+    }
+
+
+    &__btn{
+        background-color: $green-color;
+        color: #fff;
+        padding: 5px 18px;
+        border-radius: 5px;
+        border: 0;
+        outline: none;
+        float: right;
+        margin: 5px 0;
+
+        &:hover{
+            background-color: #2ecc71;
+        }
+    }
+}
